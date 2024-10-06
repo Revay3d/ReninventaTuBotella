@@ -1,3 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-y: hidden;
+}
+
 .Contenedor{
     background-color:  rgba(168, 157, 0, 0.068);
     display: flex;
@@ -32,7 +40,7 @@ gap: 20px;
     height: 250px;
     width: 350px;
     position: relative;
-    margin: 0 auto;
+    margin: 80px auto 0 auto;
 }
 .padre_contenedor span {
     position: absolute;

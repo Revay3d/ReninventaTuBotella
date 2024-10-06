@@ -26,12 +26,11 @@ createRoot(document.getElementById('root')).render(
     <Nav/>
     <Routes>
       <Route index path='*' element={<Mantenimiento/>} ></Route>
-{/* <Route index path='/' element={<Inicio/>}></Route>
-<Route path="/ranking" element={<Ranking/>}></Route>
+{/* <Route index path='/' element={<Inicio/>}></Route> */}
+{/* <Route path="/ranking" element={<Ranking/>}></Route>
 <Route path="/reglas" element={<Reglas/>}></Route>
 <Route path="/creditos" element={<Creditos/>}></Route>
-<Route path="*" element={<Error/>}></Route> */}
-
+<Route path="*" element={<Error/>}></Route>  */}
 
     </Routes>
     </BrowserRouter>

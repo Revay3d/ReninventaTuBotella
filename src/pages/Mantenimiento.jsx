@@ -6,7 +6,7 @@ function Mantenimiento() {
     <div className='padre_contenedor'>
     <div className='Contenedor'>
     <h1>503</h1>
-    <p>Upss... En estos momento la web esta en mantenimiento.</p>
+    <p>Upss... En estos momentos la web esta en mantenimiento.</p>
 </div>
 <span></span>
     </div>
