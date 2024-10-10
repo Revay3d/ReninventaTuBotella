@@ -1,35 +1,67 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react';
+import { NavHashLink } from 'react-router-hash-link';
 import "./assets/styles/Nav.css";
+import "./assets/styles/Footer.css";
 
 function Nav() {
-  const [menuToggle, setMenuToggle] = useState(false);
-  const [scroll, setScroll] = React.useState(false);
+  const [menuToggle, setMenuToggle] = useState(false); // Starts closed
+  const [scroll, setScroll] = useState(false);
+  const menuRef = useRef(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       setScroll(window.scrollY > 120);
+      
+      // Verify scroll position to change active link
+      const sections = ['ranking', 'reglas', 'creditos'];
+      sections.forEach((section) => {
+        const element = document.querySelector(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            setActiveLink(section);
+          }
+        }
+      });
+
+      // Close the menu when scrolling
+      if (menuToggle) {
+        setMenuToggle(false);
+      }
+    };
+
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target) && !event.target.closest('.menu--toggle')) {
+        setMenuToggle(false); // Close menu if clicked outside
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('mousedown', handleClickOutside);
 
-    // No olvides limpiar el evento
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []);
+  }, [menuToggle]);
+
+ 
+  const toggleMenu = () => {
+    setMenuToggle(prev => !prev); // Toggle menu state
+  };
+
 
 
   return (
     <>
     <nav>
-      <img src="img/LogoRB.svg" alt="ReinventaTuBotella" />
+      <img src="img/LogoNormal.webp" alt="ReinventaTuBotella" />
 
       <ul className={`nav__menu ${menuToggle ? 'active' : ''}`}>
-        <li><Link to="/">Inicio</Link></li>
-        <li><Link to="ranking">Ranking</Link></li>
-        <li><Link to="reglas">Reglas</Link></li>
-        <li><Link to="creditos">Créditos</Link></li>
+        <li><NavHashLink to="/">Inicio</NavHashLink></li>
+        <li><NavHashLink to="ranking">Ranking</NavHashLink></li>
+        <li><NavHashLink to="reglas">Reglas</NavHashLink></li>
+        <li><NavHashLink to="creditos">Créditos</NavHashLink></li>
       </ul>
 
       <span className={`menu--toggle ${menuToggle ? 'mostrar_x' : ''}`} onClick={() => setMenuToggle(!menuToggle)}>

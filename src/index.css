@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #030a09;
+  background-color: #010504;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,11 +26,28 @@ a:hover {
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   margin: 0;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+h1::selection,
+span::selection,
+li::selection,
+ul::selection,
+a::selection,
+p::selection, 
+br::selection,
+img::selection{
+  background-color: #49ff49;
+  color: #000; /* Cambia el color según tu diseño */
 }
 
 h1 {
