@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles/regla.css'
+import './styles/Regla.css'
 
 function reglas(props) {
   return (
