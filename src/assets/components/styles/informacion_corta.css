@@ -2,7 +2,7 @@
 
 
 .informacion__titulo{
-    color: #FFFF5F;
+    color: var(--Color_Secundario);
     font-weight: bold;
     margin-bottom: 20px;
 
@@ -15,7 +15,6 @@
 }
 .informacion{
     align-items: center;
-    margin-top: 200px;
     display: flex;
 
     flex-flow: row wrap-reverse;
@@ -46,22 +45,14 @@
     inset: 0;
     left: 70px;
     border-radius: 50%;
-    background: #49ff4996;
+    background: var(--Color_Primario);
     filter: blur(160px);
     z-index: 40;
+    opacity: 0.3;
     animation: alternate infinite 4s parpadeo;
 }
 
-@keyframes parpadeo {
-    from{
-        opacity: 0.5;
-    }
 
-    to{
-        opacity: 1;
-    }
-
-}
 .informacion_imagen img{
     width: 250px;
     z-index: 10;

@@ -1,6 +1,13 @@
 .resaltar{
-    color:  #49FF49;
-    font-weight: 700;
+    color:  var(--Color_Resaltar);
+    font-weight: 400;
+}
+
+.resaltar--header{
+    
+        color:  var(--Color_Primario);
+        font-weight: 700;
+  
 }
 
 .contenedor{
@@ -70,7 +77,7 @@ header{
     justify-content: space-around;
     z-index: 30;
    & a{ color: #616161;}
-   & a:hover{ color:#49FF49;}
+   & a:hover{ color: var(--Color_Primario);}
 
 }
 
@@ -92,11 +99,51 @@ z-index: 30;
   
 }
 
+.header_botom{
+    font-size: 20px;
+    border: none;
+    background-color: #75CEDE;
+    position: relative;
+    transition: .3s;
+    border-radius: 10px;
+    border: transparent 2px solid;
+    border-radius: 10px;
+    align-items: center;
+    margin: 0 auto;
+    width: 200px;
+a{ 
+    z-index: 40;
+color: white;
+    position: relative;
+}
+
+
+}
+
+.header_botom:hover{
+    background-color: var(--Color_Primario);
+    & a{
+    color: #47e3ff;
+    }
+  
+}
+
+
+.header_botom::after{
+    transition: .3s;
+
+    position: absolute;
+    content: "";
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.589);
+    border-radius: 10px;
+}
 .secciones{
-    color: #49FF49;
+    color: var(--Color_Primario);
     margin: 0 auto;
     align-items: center;
     text-align: center;
+    font-weight: bold;
     margin: 170px 0 10px 0;
 }
 
@@ -107,8 +154,10 @@ z-index: 30;
     gap: 20px;
     flex-flow: column;
     width: 470px;
-    margin: 0 auto;
     margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .puesto__sombra{
@@ -118,10 +167,10 @@ z-index: 30;
     top: -20px;
     left: -10px;
     z-index: -40;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     background-color: #FFFF5F;
-    filter: blur(160px);
+    filter: blur(100px);
     animation: alternate infinite 3s parpadeo_ganador;
 }
 
@@ -227,15 +276,18 @@ color: #cfcfcf93;
     }
 }
 
-.informacion{
-    margin-top: 250px;
+.informaciones_cortas{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 300px;
 }
 @media (max-width: 700px) {
 
-    .informacion{
-        margin-top: 0;
+    .informaciones_cortas{
+        margin-top: 170px;
+        gap: 120px;
     }
-
     .contenedor{
         z-index: 30;
             width: 100%;
@@ -243,10 +295,13 @@ color: #cfcfcf93;
             overflow-x: hidden;
         }
    header{
-    padding: 220px 30px ;
-    padding-bottom: 70px;
+    padding: 120px 30px ;
+    padding-bottom: 100px;
    }
 
+   .header_botom{
+    margin-top: 40px;
+   }
    .header_Lema{
     font-size: 30px;
     text-align: center;

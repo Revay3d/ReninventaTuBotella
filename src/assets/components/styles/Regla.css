@@ -1,0 +1,35 @@
+.regla{
+    display: flex;
+    flex-flow: column;
+    background-color: var(  --Color_ContrasteFondo);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+
+}
+
+
+.regla h1{
+margin-bottom: 10px;
+color: var(--Color_Primario);
+}
+
+.regla p{
+    color: rgb(180, 180, 180);
+    width: auto;
+    }
+
+
+    @media (max-width: 700px) {
+.regla{
+    padding: 20px;
+    width: 90%;
+}
+        .regla h1{
+            font-size: 30px;
+        }
+        .regla p{
+            font-size: 15px;
+            width: 95%;
+        }
+    }

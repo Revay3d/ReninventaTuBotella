@@ -59,10 +59,7 @@ nav img {
     opacity: 0.9;
 }
 
-nav img:hover{
-    fill: blue;
 
-}
 
 nav{
     ul{
@@ -96,7 +93,7 @@ nav{
     }
     
     li:hover::after{
-        background-color: #49FF49;
+        background-color: var(--Color_Primario);
         width: 90%;
     }
 }

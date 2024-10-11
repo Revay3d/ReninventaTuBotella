@@ -1,0 +1,86 @@
+.contenedor__ranking{
+    margin-top: 150px;
+    padding: 15px;
+}
+
+.ranking__titulo{
+    color: var(--Color_Primario);
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.ranking__descripcion{
+    color: rgb(190, 190, 190);
+}
+
+.ranking{
+    margin-top: 40px;
+    background-color: var(--Color_ContrasteFondo);
+    padding: 20px 5px;
+    border-radius: 10px;
+}
+
+.ranking__tabla_datos{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    font-weight: bold;
+   padding: 20px 0;
+    text-align: center;
+    align-items: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.192);
+}
+
+
+table {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center; 
+    border-radius: 5px;
+
+
+    
+  }
+
+  th{
+    color: var(--Color_Primario);
+  }
+
+  td{
+    border-bottom: 1px solid #cccccc52; 
+    opacity: 0.6;
+  }
+  
+
+  .primerPuesto td{
+    background-color: rgba(255, 251, 0, 0.521);
+    opacity: 1;
+   
+  }
+
+  .segundoPuesto td{
+    background-color: rgba(161, 161, 161, 0.349);
+    opacity: 0.8;
+   
+  }
+
+  .tercerPuesto td{
+    background-color: rgba(167, 81, 0, 0.37);
+    opacity: 0.7;
+   
+  }
+
+  th {
+  
+    font-weight: bold;
+  }
+ 
+li{
+  list-style: none;
+}

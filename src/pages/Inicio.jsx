@@ -1,7 +1,15 @@
 import React from 'react'
 import '../assets/styles/Inicio.css'
 import Informacion_corta from '../assets/components/informacion_corta.jsx'
+import { NavLink } from 'react-router-dom'; // Cambia a NavLink
+
 function Inicio() {
+
+  const handleLinkClick = () => {
+    setMenuToggle(false); // Close the menu when a link is clicked
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
   return (
     <>
   
@@ -9,7 +17,8 @@ function Inicio() {
     <div className='contenedor'>
     <div className='header_Lema'>
      <p>Botellas vacias, futuro <br></br> lleno. 
-     <span className='resaltar'> Por un planeta <br></br> mas verde. </span> </p> 
+     <span className='resaltar--header'> Por un planeta <br></br> mas verde. </span> </p> 
+     <button className='header_botom'><span><NavLink to="/reglas" onClick={handleLinkClick}>Participar</NavLink></span></button>
     </div>
 
 <div className='informacion-empresa'>
@@ -29,7 +38,7 @@ function Inicio() {
    </header>
    <div className='contenedor'>
    <main>
-
+<div className='informaciones_cortas'>
    <Informacion_corta 
   titulo="¿Quiénes somos?"
   descripcion={
@@ -82,7 +91,7 @@ function Inicio() {
   img="mingcute_pig-money-fill"
 />
 
-
+</div>
 </main>
 
 <h1 className='secciones'>ULTIMOS GANADORES</h1>
@@ -115,6 +124,7 @@ function Inicio() {
     </div>
     </div>
   </div>
+  <button className='header_botom'><span><NavLink to="/ranking" onClick={handleLinkClick}>Ver Ranking</NavLink></span></button>
 
   </div>
 

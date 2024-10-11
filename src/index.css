@@ -5,16 +5,31 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #010504;
+  background-color: #001314;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+
+  --Color_Primario: #00ffbf;
+  --Color_Resaltar: #77d3f8d2;
+  --Color_Secundario: #dbdbdb;
+  --Color_Tersario: #002F2F;
+  --Color_ContrasteFondo: #002022;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent; /* Para navegadores WebKit (Safari, Chrome) */
+  tap-highlight-color: transparent; /* Para otros navegadores */
+}
+
+
 a {
+
   
   transition: 0.3s;
   font-weight: 500;
@@ -46,8 +61,8 @@ a::selection,
 p::selection, 
 br::selection,
 img::selection{
-  background-color: #49ff49;
-  color: #000; /* Cambia el color según tu diseño */
+  background-color: var(--Color_Primario);
+  color: #4d4d4d; /* Cambia el color según tu diseño */
 }
 
 h1 {
@@ -57,22 +72,15 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+
 
 @media (prefers-color-scheme: light) {
   :root {
