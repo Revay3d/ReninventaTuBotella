@@ -11,7 +11,7 @@ export default function Mantenimiento() {
         <Flash Tipo="mantenimiento"/>
       <p className='mantenimiento__mensaje'>503</p>
       <p className='mantenimiento__descripcion'>Upps... En estos momentos la web esta en mantenimiento. Regresa mas tarde.</p>
-      < Link to="/" >  <button className='mantenimiento__botom'>Volver al inicio</button> </Link>
+      < Link to="/" >  <button className='mantenimiento__botom'>Volver al Inicio</button> </Link>
     </div>
     </div>
 

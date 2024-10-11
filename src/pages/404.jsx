@@ -11,7 +11,7 @@ export default function Error() {
         <Flash Tipo="error"/>
       <p className='error__mensaje'>404</p>
       <p className='error__descripcion'>Upps... Parese que este sitio no esta disponibles o no exite.</p>
-      < Link to="/" >  <button className='error__botom'>Volver al inicio</button> </Link>
+      < Link to="/" >  <button className='error__botom'>Volver al Inicio</button> </Link>
     </div>
     </div>
 
