@@ -58,7 +58,6 @@ margin-bottom: 30px;
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #001f0a;
     padding: 10px 20px;
 }
 
@@ -115,5 +114,13 @@ margin-bottom: 30px;
     gap: 30px;
     text-align: center;
     width: 100%;
+   }
+
+   .informacion__creditos{
+    background-color: #000806;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+
    }
 }
