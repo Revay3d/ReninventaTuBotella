@@ -20,7 +20,7 @@ header .contenedor{
 
         
 header{
-    background: url('img/Fondo.webp');
+    background: url('../img/Fondo.webp');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
