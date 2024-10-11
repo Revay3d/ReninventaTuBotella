@@ -1,5 +1,5 @@
 import React from 'react'
-import Regla from '../assets/components/Regla';
+import Regla from '../assets/components/regla.jsx';
 import "../assets/styles/Reglas.css";
 
 function Conjunto_Reglas() {
